@@ -8,12 +8,12 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCqB52zu9neYOs0-q7nE_pRVbwXEY5BDGc",
-  authDomain: "street-racing-aab13.firebaseapp.com",
+  apiKey: process.env.VUE_APP_API_KEY,
+  authDomain: process.env.VUE_APP_AUTH_DOMAIN,
   projectId: "street-racing-aab13",
   storageBucket: "street-racing-aab13.appspot.com",
   messagingSenderId: "1006994883890",
-  appId: "1:1006994883890:web:316938dd8d4d2e8073032b",
+  appId: process.env.VUE_APP_ID,
   measurementId: "G-KGEQN4ZLMF",
 };
 
