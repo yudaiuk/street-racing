@@ -1,22 +1,20 @@
 <template>
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <HeadMessage />
-
-  <!-- 新着走活 -->
-  <NewRacing />
+  <router-view />
 </template>
 
 <script>
 /* import HelloWorld from './components/HelloWorld.vue' */
-import HeadMessage from './components/HeadMessage.vue'
+/* import HeadMessage from './components/HeadMessage.vue'
 import NewRacing from './components/NewRacing.vue'
+import Prefecture from './components/Prefecture.vue' */
 
 export default {
   name: 'App',
   components: {
     /* HelloWorld, */
-    HeadMessage,
-    NewRacing
+    /* HeadMessage,
+    NewRacing,
+    Prefecture */
   }
 }
 </script>
