@@ -32,6 +32,7 @@ export default {
       querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         this.data.push(doc.data().name);
+        console.log(process.env.VUE_APP_API_KEY)
       });
     },
   },
