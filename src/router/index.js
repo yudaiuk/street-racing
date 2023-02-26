@@ -6,12 +6,18 @@ const routes = [
   {
     path: '/',
     name: 'routerTestFirst',
-    component: RouterTestFirst
+    component: RouterTestFirst,
+    meta: {
+      title: '峠イキタイ | トップページ'
+    }
   },
   {
     path: '/second',
     name: 'routerTestSecond',
-    component: RouterTestSecond
+    component: RouterTestSecond,
+    meta: {
+      title: '峠イキタイ | 管理者からのメッセージ'
+    }
   }
 ]
 
@@ -19,5 +25,10 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+
+router.afterEach((to) => {
+document.title = to.meta.title
+ })
 
 export default router

@@ -1,7 +1,7 @@
 <template>
-  <div class="header-message">
+  <h1 class="header-message">
     峠行きたい
-  </div>
+  </h1>
 </template>
 
 <script>
