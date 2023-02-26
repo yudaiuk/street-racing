@@ -1,15 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <HeadMessage />
+
+  <!-- 新着走活 -->
+  <NewRacing />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+/* import HelloWorld from './components/HelloWorld.vue' */
+import HeadMessage from './components/HeadMessage.vue'
+import NewRacing from './components/NewRacing.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    /* HelloWorld, */
+    HeadMessage,
+    NewRacing
   }
 }
 </script>
