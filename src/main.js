@@ -7,7 +7,7 @@ import VueGtag from "vue-gtag";
 createApp(App)
   .use(router, VueHead, VueGtag, {
     config: {
-      id: "G-QXYK457BGN",
+      id: "G-KGEQN4ZLMF",
     },
   })
   .mount("#app");
