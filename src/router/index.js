@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import RouterTestFirst from '@/components/RouterTestFirst.vue'
 import RouterTestSecond from '@/components/RouterTestSecond.vue'
+import PrefecturePage from '@/components/PrefecturePage.vue'
 
 const routes = [
   {
@@ -17,6 +18,14 @@ const routes = [
     component: RouterTestSecond,
     meta: {
       title: '峠イキタイ | 管理者からのメッセージ'
+    }
+  },
+  {
+    path: '/:prefecture',
+    name: 'prefecuture',
+    component: PrefecturePage,
+    meta: {
+      title: '都道府県'
     }
   }
 ]

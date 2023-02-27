@@ -3,8 +3,15 @@
     <div class="title">都道府県から峠を探す</div>
 
     <ul class="list">
-      <li class="item" v-for="(item, index) in data" :key="index">
-        {{ item }}
+      <li class="item" v-for="(item, index) in region" :key="index">
+        {{ item.name }}
+        <ul>
+          <li v-for="(item2, index) in prefectures[index]" :key="index">
+            <router-link :to="`/${item2.id}`">
+            {{ item2.name }}
+            </router-link>
+          </li>
+        </ul>
       </li>
     </ul>
   </div>
@@ -19,19 +26,37 @@ export default {
   data() {
     return {
       data: [],
+      region: [],
+      prefectures: [],
     };
   },
   mounted: function () {
     this.readData();
+    this.prefectureSearch();
   },
   methods: {
     async readData() {
-      const q = query(collection(db, "prefecture"));
+      const region = query(collection(db, "region"));
 
-      const querySnapshot = await getDocs(q);
+      const querySnapshot = await getDocs(region);
       querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        this.data.push(doc.data().name);
+        this.region.push(doc.data());
+        this.prefectures[doc.data().id] = [];
+      });
+
+      this.region.sort(function(a, b) {
+        if(a.id > b.id) {
+          return 1;
+        } else {
+          return -1;
+        }
+      })
+    },
+    async prefectureSearch() {
+      const prefecture = query(collection(db, "prefecture"));
+      const prefectureShot = await getDocs(prefecture);
+      prefectureShot.forEach((docs) => {
+        this.prefectures[docs.data().region_id - 1].push(docs.data());
       });
     },
   },
