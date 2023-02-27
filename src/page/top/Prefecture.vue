@@ -7,7 +7,7 @@
         {{ item.name }}
         <ul>
           <li v-for="(item2, index) in prefectures[index]" :key="index">
-            <router-link :to="`/${item2.id}`">
+            <router-link :to="`/search?prefecture_id=${item2.id}`">
             {{ item2.name }}
             </router-link>
           </li>
@@ -19,7 +19,7 @@
 
 <script>
 import { collection, getDocs, query } from "firebase/firestore";
-import { db } from "../firebase/config";
+import { db } from "../../firebase/config";
 
 export default {
   name: "HeadMessage",
