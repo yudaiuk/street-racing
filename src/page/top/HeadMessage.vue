@@ -14,14 +14,15 @@ export default {
 .header-message {
   font-weight: bold;
   font-size: 30px;
-  padding-top: calc(50vh / 2 - 1em / 2);
+  padding-top: calc(86vh / 2 - 1em / 2);
   margin: 0;
+  color: white;
 }
 
 .main-fv {
-  height: 50vh;
+  height: 86vh;
   position: relative;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 92, 92, 0.7);
 
   &:before {
     content: "";
