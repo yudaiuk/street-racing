@@ -22,10 +22,13 @@ export default {
   margin: 0;
   color: white;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .fv-logo {
   width: 60%;
+  margin: 0 auto;
+  display: block;
 }
 
 .main-fv {

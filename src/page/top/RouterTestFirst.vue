@@ -16,7 +16,7 @@
 /* import HelloWorld from './components/HelloWorld.vue' */
 import HeadMessage from './HeadMessage.vue'
 import NewRacing from './NewRacing.vue'
-import Prefecture from './Prefecture.vue'
+import Prefecture from './PrefecturePage.vue'
 
 export default {
   name: 'App',
