@@ -10,7 +10,9 @@
 
     <ul>
       <li v-for="(item, index) in mountData" :key="index">
-        {{ item.name }}
+        <router-link :to="`/mount/${item.mount_id}`">
+          {{ item.name }}
+          </router-link>
       </li>
     </ul>
   </div>
@@ -37,8 +39,11 @@ const setMount = async (id) => {
   );
   const queryMount = await getDocs(mount);
 
+  const i = ref(0)
   queryMount.forEach((doc) => {
     mountData.push(doc.data());
+    mountData[i.value].mount_id = doc.id;
+    i.value += 1;
   });
 };
 

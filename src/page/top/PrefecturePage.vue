@@ -70,7 +70,7 @@ readRegion();
 <style scoped lang="scss">
 .title {
   font-weight: bold;
-  color: black;
+  color: #e00000;
   text-align: left;
   font-size: 16px;
   margin-bottom: 15px;
@@ -96,6 +96,7 @@ readRegion();
 
   &-item {
     margin: 0 10px 5px 0;
+    font-size: 13px;
 
     & a {
       color: black;
